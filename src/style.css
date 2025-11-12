@@ -29,16 +29,7 @@
   /* ===============================
      CABEÇALHO (HEADER)
      =============================== */
-  
-  header {
-    width: 100%;                        /* Ocupa toda a largura */
-    background-color: #0072bb;          /* Azul padrão SENAI */
-    color: white;                       /* Texto branco */
-    padding: 20px 0;                    /* Espaçamento interno */
-    font-size: 1.6em;                   /* Tamanho de texto maior */
-    font-weight: bold;                  /* Texto em negrito */
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2); /* Sombra abaixo do cabeçalho */
-  }
+ 
   
   /* Estilo do menu principal de navegação */
   .menu-principal {
@@ -64,18 +55,28 @@
     margin-top: 30px;
     width: 90%;
     max-width: 900px;
+    margin-left: auto; /* Centraliza o container */
+   margin-right: auto;
+    text-align: right;
   }
+
+
+
   
   /* Título principal das páginas */
   h1 {
     color: #005b96;
     margin-bottom: 20px;
+    text-align: center;
   }
   
   /* Parágrafos genéricos */
   p {
     color: #444;
     line-height: 1.5; /* Espaçamento entre linhas */
+    margin-left: auto; 
+    text-align: center;
+    
   }
   
   /* ===============================
@@ -108,4 +109,28 @@
     background-color: white;               /* Fundo branco */
     border-radius: 10px;                   /* Cantos arredondados */
     padding: 20px;
+  }
+footer{
+    width: 100%;                        /* Ocupa toda a largura */
+    background-color: #0072bb;          /* Azul padrão SENAI */
+    color: white;                       /* Texto branco */
+    padding: 20px 0;                    /* Espaçamento interno */
+    font-size: 1.6em;                   /* Tamanho de texto maior */
+    font-weight: bold;                  /* Texto em negrito */
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2); 
+    bottom: 10; /* Fixa o footer na parte inferior da janela */
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #0072bb;
+  }
+  .container{
+    .evento {
+      background-color: rgb(125, 72, 209);
+      padding:20px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0,0,1,1.2);
+      width: 500px;
+      text-align: left;
+    }
   }

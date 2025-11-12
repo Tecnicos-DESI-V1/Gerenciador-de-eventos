@@ -4,6 +4,7 @@ import Footer from "./componentes/Footer";
 import Home from "./paginas/Home";
 import Sobre from "./paginas/Sobre";
 import "./style.css";
+import "./header.css";
 
 function App() {
   return (
@@ -11,9 +12,7 @@ function App() {
       <div className="app">
         <Header />
 
-        <nav>
-          <Link to="/">Início</Link> | <Link to="/sobre">Sobre</Link>
-        </nav>
+      
 
         <Routes>
           <Route path="/" element={<Home />} />
