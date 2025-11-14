@@ -104,18 +104,17 @@
   padding: 20px;
 }
 
-  .evento {
-    background: linear-gradient(to right, rgba(129, 2, 247, 0.8), rgba(0,0,255,0.2));
-    padding:20px;
-    border-radius: 15px;
-    box-shadow: 0 0 10px rgba(0,0,1,1.2);
-    width: 400px;
-    text-align: left;
-    margin-bottom: 20px; /* separa verticalmente */
-    text-align: center;
-    transition: transform 0.2s ease, background-color 0.3s ease;
-  }
-  
+.evento {
+  background: linear-gradient(to right, rgba(129, 2, 247, 0.8), rgba(0,0,255,0.2));
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2); /* corrigido */
+  width: 400px;
+  text-align: center; /* escolha apenas um */
+  margin-bottom: 20px;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
   .evento:hover {
     transform: scale(1.05);
     background-color: #d155ff;

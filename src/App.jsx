@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./header/Header";
 import Footer from "./footer/Footer";
 import Home from "./paginas/Home";
@@ -6,9 +6,6 @@ import Sobre from "./paginas/Sobre";
 import "./style.css";
 import "./header/header.css";
 import "./footer/footer.css";
-
-
-
 
 function App() {
   return (
@@ -19,7 +16,6 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/sobre" element={<Sobre />} />
-          <Route path="/login" element={<Login />} />
         </Routes>
 
         <Footer />
