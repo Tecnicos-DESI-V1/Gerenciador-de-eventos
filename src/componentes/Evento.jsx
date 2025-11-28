@@ -13,3 +13,12 @@ function Evento({ nome, data, local }) {
 }
 
 export default Evento;
+
+
+
+
+
+
+
+
+
