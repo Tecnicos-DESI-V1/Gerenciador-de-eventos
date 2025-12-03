@@ -30,6 +30,7 @@ function App() {
           <Route path="/" element={<Login />} /> 
           <Route path="/home" element={<Home eventos={eventos} />} />
           <Route path="/sobre" element={<Sobre />} />
+          <Route path="/" element={<Login />} />
           <Route
             path="/CadastroEvento"
             element={<CadastroEvento onCadastrar={handleCadastrarEvento} />}

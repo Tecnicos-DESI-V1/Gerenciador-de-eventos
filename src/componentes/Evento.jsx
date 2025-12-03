@@ -8,7 +8,9 @@ function Evento({ nome, data, local }) {
       {/* Mostra a data a partir dos dados recebidos via props */}
       <p>Local: {local}</p>
       {/* Mostra o local a partir dos dados recebidos via props */}
+     
     </div>
+    
   );
 }
 

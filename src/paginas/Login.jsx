@@ -10,9 +10,12 @@ function Login() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (email === "Crisbeth@gmail.com" && senha === "123456") {
-      alert("Login realizado com sucesso!");
-      navigate("/home"); // redireciona para Home
+    // Lista de emails permitidos
+    const emailsPermitidos = ["Crisbeth@gmail.com", "Catherine@gmail.com"];
+
+    if (emailsPermitidos.includes(email) && senha === "123456") {
+      navigate("/home");
+    
     } else {
       alert("Email ou senha inválidos!");
     }

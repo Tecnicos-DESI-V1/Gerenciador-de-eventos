@@ -3,6 +3,13 @@
     flex-direction: column;
     align-items: center;
     margin-top: 50px;
+    background: linear-gradient(to right, #1f3c88, #3a6ea5); /* azul profissional degradê */
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 500px;
+    margin: 40px auto;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+    color: #fff;
   }
   
   .login-container form {
@@ -15,13 +22,24 @@
     margin: 10px 0;
     padding: 10px;
     font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    color: #333;
+    text-align: center; /* centraliza texto dentro do input */
   }
   
   .login-container button {
     padding: 10px;
-    background-color: #4caf50;
+    background-color: #1f3c88; /* azul escuro corporativo */
     color: white;
     border: none;
+    border-radius: 8px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .login-container button:hover {
+    background-color: #162d66; /* azul mais escuro no hover */
   }
   
