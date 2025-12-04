@@ -207,7 +207,7 @@ button:hover,
 }
 
 .btn-salvar:hover {
-  background-color: #162d66;
+  background-color: #162d66;/* Botão salvar */
 }
 
 /* Responsivo */
