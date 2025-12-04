@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
 import { useState } from "react";
 import Header from "./header/Header";
 import Footer from "./footer/Footer";
@@ -14,6 +14,7 @@ import Login from "./paginas/Login";
 
 function App() {
   const [eventos, setEventos] = useState([]);
+  const [logado, setLogado] = useState(false); // ✅ agregado
 
   function handleCadastrarEvento(novoEvento) {
     setEventos([...eventos, novoEvento]);
@@ -23,21 +24,38 @@ function App() {
   return (
     <Router>
       <div className="app">
-        <Header />
+        {logado && <Header />} {/* ✅ solo aparece si está logado */}
 
         <Routes>
-          {/* Agora a rota inicial "/" mostra o Login */}
-          <Route path="/" element={<Login />} /> 
-          <Route path="/home" element={<Home eventos={eventos} />} />
-          <Route path="/sobre" element={<Sobre />} />
-          <Route path="/" element={<Login />} />
+          {/* ✅ Login */}
+          <Route path="/" element={<Login setLogado={setLogado} />} />
+
+          {/* ✅ Home protegida */}
+          <Route
+            path="/home"
+            element={logado ? <Home eventos={eventos} /> : <Navigate to="/" />}
+          />
+
+          {/* ✅ Sobre protegida */}
+          <Route
+            path="/sobre"
+            element={logado ? <Sobre /> : <Navigate to="/" />}
+          />
+
+          {/* ✅ Cadastro protegido */}
           <Route
             path="/CadastroEvento"
-            element={<CadastroEvento onCadastrar={handleCadastrarEvento} />}
+            element={
+              logado ? (
+                <CadastroEvento onCadastrar={handleCadastrarEvento} />
+              ) : (
+                <Navigate to="/" />
+              )
+            }
           />
         </Routes>
 
-        <Footer />
+        {logado && <Footer />} {/* ✅ solo aparece si está logado */}
       </div>
     </Router>
   );

@@ -5,8 +5,9 @@ function Header() {
     <header>
       <h2>Gerenciador de Eventos SENAI</h2>
       <nav>
-        <Link to="/">Início</Link> | <Link to="/sobre">Sobre</Link> |<Link to="/CadastroEvento">Cadastrar Evento</Link> 
-
+        <Link to="/home">Início</Link> | 
+        <Link to="/sobre">Sobre</Link> | 
+        <Link to="/CadastroEvento">Cadastrar Evento</Link>
       </nav>
     </header>
   );

@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Login.css";
 
-function Login() {
+function Login({ setLogado }) {
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
   const navigate = useNavigate();
@@ -10,12 +10,11 @@ function Login() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Lista de emails permitidos
     const emailsPermitidos = ["Crisbeth@gmail.com", "Catherine@gmail.com"];
 
     if (emailsPermitidos.includes(email) && senha === "123456") {
-      navigate("/home");
-    
+      setLogado(true); // ✅ agregado
+      navigate("/home"); // ✅ redirección automática
     } else {
       alert("Email ou senha inválidos!");
     }
