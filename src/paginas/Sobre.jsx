@@ -2,7 +2,7 @@ function Sobre() {
   return (
     <main>
       <h1>Sobre o Sistema</h1>
-      <p>Esse sistema foi desenvolvido para auxiliar na organização dos eventos.</p>
+      <p>Este sistema foi desenvolvido pela Catherine e Cribeth para auxiliar na organização dos eventos.</p>
       <p>Projeto do curso Técnico em Desenvolvimento de Sistemas - SENAI.</p>
      
     </main>
