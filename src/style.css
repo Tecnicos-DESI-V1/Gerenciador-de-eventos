@@ -85,7 +85,7 @@ p {
 
 button,
 .btn {
-  background-color: #1f3c88; /* azul escuro */
+  background-color: #214194; /* azul escuro */
   color: white;
   border: none;
   padding: 10px 20px;
@@ -95,6 +95,12 @@ button,
   font-size: 1em;
   transition: background-color 0.3s ease;
 }
+.btn-submit:hover {
+  background-color: #142b64;/* Botão salvar */
+}
+
+
+
 
 button:hover,
 .btn:hover {
